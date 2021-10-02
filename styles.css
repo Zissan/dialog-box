@@ -1,0 +1,40 @@
+/*
+MODAL STYLES
+*/
+.modal {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.modal--sm {
+  width: 30vw;
+}
+
+.modal > div {
+  display: flex;
+}
+
+.modal__header {
+  background: #c1c1b5;
+  width: 100%;
+  min-height: 20px;
+  padding: 5px;
+}
+
+.modal__body {
+  width: 100%;
+  min-height: 100px;
+}
+
+.modal__footer {
+  min-height: 20px;
+}
+
+/*OVELAY STYLES*/
+.modal-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
