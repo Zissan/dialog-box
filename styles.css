@@ -7,6 +7,11 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.hide {
+  display: none !important;
+}
+
 /*
 MODAL STYLES
 */
@@ -56,4 +61,21 @@ MODAL STYLES
   z-index: 1;
   top: 0;
   left: 0;
+}
+
+/*FORM STYLES*/
+.form {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form > div {
+  margin-left: auto;
+}
+
+.form__field-group {
+  display: flex;
 }

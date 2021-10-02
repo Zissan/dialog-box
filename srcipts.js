@@ -1,9 +1,18 @@
 let modal = null;
 let modalOverlay = null;
 let close = null;
+
+let form = null;
+
 const btnModal = document.getElementById("btnModal");
 
 function handleClose() {
+  disposeModal();
+}
+
+function handleSubmit(ev) {
+  console.log(ev);
+  ev.preventDefault();
   disposeModal();
 }
 
@@ -17,8 +26,27 @@ function createModal() {
           Header
           <div class='modal__header__close'>X</div>
         </div>
-        <div class="modal__body">Body</div>
-        <div class="modal__footer">Footer</div>
+        <div class="modal__body">
+          <form class='form' id='form'>
+            <div class='form__field-group'>
+              <div class='form__field-group__label'>
+                Start at:
+              </div>
+              <div class='form__field-group__control'>
+                <input name='statAt' type='number' />
+              </div>
+            </div>
+            <div class='form__button-group'>
+              <button class='form__button-group--default' type='submit'>
+                Ok
+              </button>
+              <button class='form__button-group--default'>
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal__footer hide">Footer</div>
     `;
 
   modalOverlay = document.createElement("div");
@@ -29,6 +57,9 @@ function createModal() {
 
   close = document.querySelector(".modal__header__close");
   close.addEventListener("click", handleClose);
+
+  form = document.getElementById("form");
+  form.addEventListener("submit", handleSubmit);
 }
 
 function disposeModal() {
