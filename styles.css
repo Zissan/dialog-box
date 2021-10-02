@@ -7,7 +7,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
 /*
 MODAL STYLES
 */
@@ -15,9 +14,13 @@ MODAL STYLES
   background: #fff;
   border: 1px solid #000;
   border-radius: 5px;
+  position: absolute;
+  z-index: 2;
 }
 .modal--sm {
-  width: 30vw;
+  width: 30%;
+  top: 20%;
+  left: 35%;
 }
 
 .modal > div {
@@ -47,4 +50,6 @@ MODAL STYLES
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
+  top: 0;
+  left: 0;
 }
